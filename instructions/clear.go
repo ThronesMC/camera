@@ -1,6 +1,7 @@
 package instructions
 
 import (
+	"github.com/df-mc/dragonfly/server/session"
 	"github.com/sandertv/gophertunnel/minecraft/protocol"
 	"github.com/sandertv/gophertunnel/minecraft/protocol/packet"
 )
@@ -8,11 +9,8 @@ import (
 type ClearCameraInstruction struct {
 }
 
-func (i ClearCameraInstruction) Packet() packet.Packet {
+func (i ClearCameraInstruction) Packet(*session.Session) packet.Packet {
 	return &packet.CameraInstruction{
-		Set:    protocol.Optional[protocol.CameraInstructionSet]{},
-		Clear:  protocol.Option(true),
-		Fade:   protocol.Optional[protocol.CameraInstructionFade]{},
-		Target: protocol.Optional[protocol.CameraInstructionTarget]{},
+		Clear: protocol.Option(true),
 	}
 }
