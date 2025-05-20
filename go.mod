@@ -2,12 +2,12 @@ module github.com/ThronesMC/camera
 
 go 1.24
 
-require github.com/sandertv/gophertunnel v1.45.0
+require github.com/sandertv/gophertunnel v1.46.0
 
 require (
 	github.com/brentp/intintmap v0.0.0-20190211203843-30dc0ade9af9 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
-	github.com/df-mc/dragonfly v0.10.3 // indirect
+	github.com/df-mc/dragonfly v0.10.4-0.20250519210845-8808211abc44 // indirect
 	github.com/df-mc/goleveldb v1.1.9 // indirect
 	github.com/df-mc/worldupgrader v1.0.19 // indirect
 	github.com/go-gl/mathgl v1.2.0 // indirect
