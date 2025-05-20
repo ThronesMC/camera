@@ -4,6 +4,7 @@ import (
 	"github.com/ThronesMC/camera"
 	"github.com/df-mc/dragonfly/server"
 	"github.com/df-mc/dragonfly/server/player/chat"
+	"github.com/df-mc/dragonfly/server/world"
 	"log/slog"
 )
 
@@ -27,5 +28,6 @@ func main() {
 	srv.Listen()
 	for p := range srv.Accept() {
 		camera.SendPresets(p)
+		p.SetGameMode(world.GameModeCreative)
 	}
 }
